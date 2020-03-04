@@ -16,6 +16,13 @@ struct HTextAndButton: View {
     
     var buttonAction: () -> Void
     
+    public init(buttonTitle:String,text:String,,fontSize:CGFloat, action:@escaping (() -> Void)) {
+        self.buttonTitle = buttonTitle
+        self.text = text
+        self.fontSize = fontSize
+        self.buttonAction = action
+    }
+    
     var body: some View {
         HStack {
             Text(text)

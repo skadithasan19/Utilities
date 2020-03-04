@@ -12,12 +12,14 @@ import SwiftUI
 public struct CustomTextField: View {
     var leadingSystemIcon: String
     var placeHolder: String
-    var editingChanged:((Bool)-> Void)
     @Binding var value: String
+    var editingChanged:((Bool)-> Void)
+
     
-    public init(leadingSystemIcon:String,placeHolder:String editingChanged:@escaping ((Bool) -> Void)) {
+    public init(leadingSystemIcon:String,placeHolder:String, value:Binding<String>, editingChanged:@escaping ((Bool) -> Void)) {
         self.leadingSystemIcon = leadingSystemIcon
         self.placeHolder = placeHolder
+        self._value = value
         self.editingChanged = editingChanged
     }
     
