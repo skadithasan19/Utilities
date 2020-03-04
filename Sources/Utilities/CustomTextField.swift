@@ -7,12 +7,19 @@
 //
 
 import SwiftUI
+
 @available(iOS 13.0, *)
 public struct CustomTextField: View {
     var leadingSystemIcon: String
     var placeHolder: String
     var editingChanged:((Bool)-> Void)
     @Binding var value: String
+    
+    public init(leadingSystemIcon:String,placeHolder:String editingChanged:@escaping ((Bool) -> Void)) {
+        self.leadingSystemIcon = leadingSystemIcon
+        self.placeHolder = placeHolder
+        self.editingChanged = editingChanged
+    }
     
     public var body: some View {
         VStack {

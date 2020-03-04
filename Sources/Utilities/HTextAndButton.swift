@@ -8,7 +8,7 @@
 
 import SwiftUI
 @available(iOS 13.0, *)
-public struct HTextAndButton: View {
+struct HTextAndButton: View {
     
     var text: String
     var buttonTitle: String
@@ -16,7 +16,7 @@ public struct HTextAndButton: View {
     
     var buttonAction: () -> Void
     
-    public var body: some View {
+    var body: some View {
         HStack {
             Text(text)
                 .font(Font.custom("Helvetica", size: fontSize))

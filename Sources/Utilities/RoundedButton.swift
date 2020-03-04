@@ -10,8 +10,13 @@ import SwiftUI
 @available(iOS 13.0, *)
 public struct RedRoundedButton: View {
     
-    var buttonTitle:String
-    var action: () -> Void
+    public var buttonTitle:String
+    public var action: () -> Void
+    
+    public init(buttonTitle:String, action:@escaping (() -> Void)) {
+        self.buttonTitle = buttonTitle
+        self.action = action
+    }
     
     public var body: some View {
         Button(action: action) {
@@ -33,6 +38,11 @@ public struct GrayRoundedButton: View {
     
     var buttonTitle:String
     var action: () -> Void
+    
+    public init(buttonTitle:String, action:@escaping (() -> Void)) {
+        self.buttonTitle = buttonTitle
+        self.action = action
+    }
     
     public var body: some View {
         Button(action: action) {
