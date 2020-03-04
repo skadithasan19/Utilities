@@ -12,6 +12,9 @@ import SwiftUI
 public struct ActivityIndicatorSmall: UIViewRepresentable {
     @Binding var shouldAnimate: Bool
     
+    public init(animate:Binding<Bool>) {
+        self._shouldAnimate = animate
+    }
     public func makeUIView(context: Context) -> UIActivityIndicatorView {
         return UIActivityIndicatorView()
     }
