@@ -8,12 +8,12 @@
 
 import SwiftUI
 @available(iOS 13.0, *)
-struct RedRoundedButton: View {
+public struct RedRoundedButton: View {
     
     var buttonTitle:String
     var action: () -> Void
     
-    var body: some View {
+    public var body: some View {
         Button(action: action) {
             Text(buttonTitle).frame(width: 300)
                 .font(Font.custom("Helvetica", size: 20))
@@ -29,12 +29,12 @@ struct RedRoundedButton: View {
 }
  
 @available(iOS 13.0, *)
-struct GrayRoundedButton: View {
+public struct GrayRoundedButton: View {
     
     var buttonTitle:String
     var action: () -> Void
     
-    var body: some View {
+    public var body: some View {
         Button(action: action) {
             Text(buttonTitle).frame(width: 300)
                 .font(Font.custom("Helvetica", size: 20))

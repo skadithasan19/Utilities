@@ -12,7 +12,7 @@ import SwiftUI
 public class ColorUtilities : NSObject {
  
     
- public static func hexStringToUIColor (hex:String) -> UIColor {
+public static func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
         if (cString.hasPrefix("#")) {

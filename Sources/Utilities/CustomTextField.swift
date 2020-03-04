@@ -8,13 +8,13 @@
 
 import SwiftUI
 @available(iOS 13.0, *)
-struct CustomTextField: View {
+public struct CustomTextField: View {
     var leadingSystemIcon: String
     var placeHolder: String
     var editingChanged:((Bool)-> Void)
     @Binding var value: String
     
-    var body: some View {
+    public var body: some View {
         VStack {
             HStack(spacing:10.0){
                 Image(systemName: leadingSystemIcon)
