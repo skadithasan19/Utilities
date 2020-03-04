@@ -16,7 +16,7 @@ public final class KeyboardSwiftUI: ObservableObject {
     
     private var notificationCenter: NotificationCenter
     
-    @Published public(set) var currentHeight: CGFloat = 0
+    @Published var currentHeight: CGFloat = 0
 
     init(center: NotificationCenter = .default) {
         notificationCenter = center
